@@ -1,5 +1,5 @@
 # chess-architecture
 Terraform project to deploy chess server to AWS
 
-# TODO
+## TODO
 VPC and subnet
