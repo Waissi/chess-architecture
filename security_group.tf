@@ -1,13 +1,13 @@
 resource "aws_security_group" "chess_server_sg" {
   name        = "chess_server_sg"
   description = "Allows connections to chess server"
-  vpc_id      = "vpc-03d7cacbbbbe7f25c"
+  vpc_id      = aws_default_vpc.chess_server.id
 }
 
 resource "aws_security_group" "chess_allocator_sg" {
   name        = "chess_allocator_sg"
   description = "Allows connections to chess allocator"
-  vpc_id      = "vpc-03d7cacbbbbe7f25c"
+  vpc_id      = aws_default_vpc.chess_server.id
 }
 
 resource "aws_vpc_security_group_egress_rule" "allow_server_trafic_out" {
